@@ -2,6 +2,10 @@
     templateType: page
     isAvailableForNewContent: true
 -->
+<!--
+    templateType: page
+    isAvailableForNewContent: true
+-->
 <!doctype html>
 <html>
   <head>
@@ -11,27 +15,6 @@
     {{ standard_header_includes }}
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="profile" href="http://gmpg.org/xfn/11">
-    <!-- <script type="application/ld+json">{
-  		"@context": "http://schema.org",
-  		"@type": "Organization",
-  		"name" : "KPISOFT",
-  		"url" : "https://www.kpisoft.com/",
-  		"logo" : "https://www.kpisoft.com/wp-content/uploads/2020/04/kpisoft_logo.svg",
-  		"telephone" : "+1 (800) 947 8211",
-    		"address" : {
-    		"@type": "PostalAddress",
-    		"addressCountry": "United States",
-    		"addressLocality": "Houston",
-    		"addressRegion": "Texas",
-    		"postalCode": "77056",
-    		"streetAddress": "2700 Post Oak Blvd, 21st Floor"
-  		},
-  		"sameAs" : [
-    		"https://www.facebook.com/kpisoftinc/",
-    		"https://twitter.com/kpisoft/",
-    		"https://www.linkedin.com/company/kpisoft"
-		]
- 	}</script> -->
     <link rel="pingback" href="https://www.kpisoft.com/xmlrpc.php">
     <link rel="icon" type="image/png"
         href="https://www.kpisoft.com/wp-content/themes/ultrabootstrap-child/images/favicon.png">
@@ -72,6 +55,20 @@
         })(window, document, 'script', 'dataLayer', 'GTM-PHBJ8TZ');</script>
 
     <style>
+      body {
+          margin-top: 0;
+      }
+      
+      .align {
+          top: 20% !important;
+      }
+      
+      .banner_heading {
+        padding-right: 100px;
+      }
+        .mobile-subtext {
+            display: none;  
+        }
         .bg-img-replace {
             height: 650px;
             width: 100%;
@@ -83,11 +80,49 @@
         }
       
         .hs_cos_wrapper_type_module {
-            width:70%;
+            width:85%;
             margin: 0 auto;
             box-shadow: 0 5px 10px #777;
         }
       
+      hs-input hs-fieldtype-intl-phone {
+             display: flex !important;
+             justify-content: center;
+        }
+      
+      hs-input hs-fieldtype-intl-phone {
+          display: flex;
+          justify-content: center;
+      }
+
+      .hs-fieldtype-intl-phone.hs-input input {
+	        width: 26% !important;
+      }
+
+        .hs-fieldtype-intl-phone.hs-input select {
+          width: 10% !important;
+        }
+      
+      #hs_cos_wrapper_form input[type="text"] {
+        width: 90%;
+      }
+      
+      #hs_cos_wrapper_form input[type="email"] {
+        width: 90%;
+      }
+      
+      .hs-fieldtype-intl-phone.hs-input {
+        width: 90%;
+        margin: 0 auto;
+      }
+
+        #hs_cos_wrapper_form input[type="tel"] {
+          padding-left: 0px !important
+        }
+        
+      .align {
+        top:10%;
+      }
         input {
           outline: none;
       }
@@ -99,11 +134,36 @@
             color: #404040;
             font-size: 16px;
         }
-
+      
+        #hs_cos_wrapper_form .hs-error-msg {
+          line-height: 12px !important;
+          text-align: left;
+        }
+      
+        #hs_cos_wrapper_form select{
+            padding-bottom: 7px !important;
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+        }
+      
         @media screen and (max-width: 767.9px) {
+         
+                
+          .align {
+              top: 10%;
+          }
             .mobile-view {
                 display: block;
+                height: 1000px;
             }
+          
+            .mobile-subtext {
+              display: block;  
+            }
+          
+          .desktop-subtext {
+              display:none;
+          }
 
             .bg-img-replace {
                 display: none;
@@ -113,7 +173,17 @@
               display: block !important;
               width: 100% !important;
             }
+            
+            .mobile-form-margin
+            {
+              display: flex;
+              flex-wrap:wrap;
+              margin-top: 220px;"
+            }
           
+            .hs_cos_wrapper_type_module {
+              width:95%;
+            }
 /*           #hs_form_target_form {
             text-align: left;
           }
@@ -121,7 +191,38 @@
           #hs_cos_wrapper_form .hs-form-field {
             text-align: LEFT !important
           } */
-        } 
+        }
+       @media screen and (max-width: 390px) {
+            .mobile-view {
+                display: block;
+                height: 900px;
+            }
+         
+         .performancetextsol {
+                margin-top: -100px;
+                margin-bottom: 100px;
+         }
+         
+         .mobile-subtext {
+            margin-top: 150px;
+            margin-bottom: -150px;
+         }
+         
+            .mobile-form-margin
+            {
+              display: flex;
+              flex-wrap:wrap;
+              margin-top: 140px;"
+            }
+         
+         .text-center {
+            margin-top:110px;
+         }
+         
+         .hs_cos_wrapper_type_module {
+            width: 100% !important;
+         }
+      }
     </style>
   </head>
   <body
@@ -144,6 +245,23 @@
                                     data-src="https://www.kpisoft.com/wp-content/uploads/2020/04/kpisoft_logo.svg"
                                     class="lazyload custom-logo" alt="KPISoft Logo"></a></div>
                     </div>
+<!--                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <form class="navbar-form navbar-right" role="search">
+                            <ul class="nav pull-right">
+                                <div class="main-search"> <button class="btn btn-search" type="button"
+                                        data-toggle="collapse" data-target="#collapseExample" aria-expanded="false"
+                                        aria-controls="collapseExample"> <i class="fa fa-search"></i> </button>
+                                    <div class="search-box collapse" id="collapseExample">
+                                        <div class="well search-well">
+                                            <form method="get" action="https://www.kpisoft.com/"> <input type="text"
+                                                    class="form-control" placeholder="Search a Keyword" value name="s">
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </ul>
+                        </form>
+                    </div> -->
                 </div>
             </nav>
         </section>
@@ -163,20 +281,26 @@
 
         <div class="bg-img-replace"></div>
         <div class="col-md-12 col-sm-12 col-xs-12 align">
-            <div class="container1 performanceleftimg">
-                <div class="row1" style="display: flex; flex-wrap:wrap">
-                  <div class="col-md-6 col-sm-12 col-xs-12">
+            <div class="container1 performanceleftimg" style="margin:0 auto !important;">
+                <div class="row1 mobile-form-margin">
+                  <div class="col-md-6 col-sm-6 col-xs-12">
                     <div class=" performancetextsol">
                         <div class="banner_heading set">
-                            <p><strong>Building performance resilience</strong><br> for the enterprise of tomorrow</p>
+                            <p><strong>Building performance resilience</strong><br></p>
                         </div>
                         <div class="text3">
-                            <p>Empower, align and engage your teams with behaviour-changing insights, every day..</p>
-                            <p><strong>Starting at $10 per use per month!</strong></p>
+                            <p> </p>
+                            <p class="desktop-subtext"><strong>Starting at $10 per user per month!</strong></p>
+                            <div class="mobile-subtext">
+                              <strong>Starting at $10</strong><br><strong>per user per month</strong>
+                            </div>
                         </div> 
+<!--                         <a href="http://www.kpisoft.com/contact/" class="btn1" style="margin-right: 25px;"> Talk to us </a>  -->
+<!--                         <a href="http://www.kpisoft.com/products/platform/" class="know desktop"> Know more</a> 
+                             <a href="http://www.kpisoft.com/products/platform/" class="know mob"><br> Know more</a> -->
                       </div>
                   </div>
-                  <div class="col-md-6 col-sm-12 col-xs-12">
+                  <div class="col-md-6 col-sm-6 col-xs-12">
                         <div class="text-center">
                           <a name="form-anchor"></a>
                           {% module "form" path="@hubspot/form" overrideable=True %}
